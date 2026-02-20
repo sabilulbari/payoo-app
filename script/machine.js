@@ -34,6 +34,7 @@ function showOnly(id){
     const bonusMoney = document.getElementById("bonus-money");
     const transferMoney = document.getElementById("transfer-money");
     const billpay = document.getElementById("pay-bill");
+    const transectionHistory = document.getElementById("transection-history");
 
 
     addMoney.classList = "hidden";
@@ -41,6 +42,7 @@ function showOnly(id){
     bonusMoney.classList = "hidden";
     transferMoney.classList = "hidden";
     billpay.classList = "hidden";
+    transectionHistory.classList = "hidden";
 
     const selected = document.getElementById(id);
 
