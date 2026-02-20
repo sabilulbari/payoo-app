@@ -28,16 +28,19 @@ function setBalance(value){
 
 function showOnly(id){
 
-    console.log("You Successfully clicked")
-
     // catch the ID of section
     const addMoney = document.getElementById("add-money");
     const cashOut = document.getElementById("cash-out");
     const bonusMoney = document.getElementById("bonus-money");
+    const transferMoney = document.getElementById("transfer-money");
+    const billpay = document.getElementById("pay-bill");
+
 
     addMoney.classList = "hidden";
     cashOut.classList = "hidden";
     bonusMoney.classList = "hidden";
+    transferMoney.classList = "hidden";
+    billpay.classList = "hidden";
 
     const selected = document.getElementById(id);
 

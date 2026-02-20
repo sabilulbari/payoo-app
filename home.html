@@ -21,7 +21,13 @@
     />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Universal Style -->
     <style>
@@ -31,136 +37,240 @@
     </style>
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-
     <!-- Header -->
-    <header class="border-b border-gray-300 ">
-        <section class="w-11/12 mx-auto flex justify-between items-center py-4">
-            <div class="right-part flex gap-2">
-                <div class="w-[60px]">
-                    <img src="./assets/logo.png" alt="">
-                </div>
-                <div>
-                    <p class="text-[18px] font-extrabold">$</ span>45000</p>
-                    <p class="text-neutral/50">Available Balance</p>
-                </div>
-            
-            </div>
-            <div class="left-part">
-               <a href="index.html"> <button class="btn  btn-outline text-neutral/50  border-neutral-300 rounded-xl "><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button></a>
-            </div>
-        </section>
-
+    <header class="border-b border-gray-300 sticky top-0 bg-base-200 z-100">
+      <section class="w-11/12 mx-auto flex justify-between items-center py-4">
+        <div class="right-part flex gap-2">
+          <div class="w-[60px]">
+            <img src="./assets/logo.png" alt="" />
+          </div>
+          <div>
+            <p class="text-[18px] font-extrabold">$ <span id="main-balance">45000</span></p>
+            <p class="text-neutral/50">Available Balance</p>
+          </div>
+        </div>
+        <div class="left-part">
+          <a href="index.html">
+            <button class="btn btn-outline text-neutral/50 border-neutral-300 rounded-xl"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button></a
+          >
+        </div>
+      </section>
     </header>
 
-    <!-- Heading title -->
+    <!-- function button -->
     <section class="py-8 bg-white rounded-3xl">
-        <div class="w-11/12 mx-auto space-y-8 ">
-            <h2 class="text-[24px] font-bold ">Welcome to Pay<span class="text-primary">oo</span></h2>
-            <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+      <div class="w-11/12 mx-auto space-y-8">
+        <h2 class="text-[24px] font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
+        <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+      </div>
+      <section class="w-11/12 mx-auto mt-5">
+        <div class="card grid grid-cols-3 gap-4">
+          <button onclick="showOnly('add-money')" class="btn btn-primary btn-outline flex-col h-full py-5 text-[13px] font-normal rounded-xl">
+            <img src="./assets/opt-1.png" alt="" />
+            <p>Add Money</p>
+          </button>
+          <button onclick="showOnly('cash-out')" class="btn btn-primary btn-outline flex-col h-full py-5 text-[13px] font-normal rounded-xl">
+            <img src="./assets/opt-2.png" alt="" />
+            <p>Cash Out</p>
+          </button>
+          <button onclick="showOnly('transfer-money')" class="btn flex-col h-full py-5 btn-primary btn-outline text-[13px] font-normal rounded-xl">
+            <img src="./assets/opt-3.png" alt="" />
+            <p>Transfer Money</p>
+          </button>
+          <button onclick="showOnly('bonus-money')" class="btn flex-col h-full py-5 text-[13px] font-normal btn-primary btn-outline rounded-xl">
+            <img src="./assets/opt-4.png" alt="" />
+            <p>Get Bonus</p>
+          </button>
+          <button onclick="showOnly('pay-bill')" class="btn flex-col h-full py-5 text-[13px] font-normal btn-primary btn-outline rounded-xl">
+            <img src="./assets/opt-5.png" alt="" />
+            <p>Pay Bill</p>
+          </button>
+          <button class="btn flex-col h-full py-5 text-[13px] font-normal btn-primary btn-outline rounded-xl">
+            <img src="./assets/opt-6.png" alt="" />
+            <p>Transactions</p>
+          </button>
         </div>
-        <!-- function button -->
-        <section class="w-11/12 mx-auto mt-5">
-            <div class="card grid grid-cols-3 gap-4">
-                <button class="btn btn-primary  btn-outline   flex-col h-full py-5 text-[13px] font-normal  rounded-xl">
-                    <img src="./assets/opt-1.png" alt="">
-                    <p>Add Money</p>
-                </button>
-                <button class="btn btn-primary  btn-outline flex-col h-full py-5 text-[13px] font-normal  rounded-xl">
-                    <img src="./assets/opt-2.png" alt="">
-                    <p>Cash Out</p>
-                </button>
-                <button class="btn flex-col h-full py-5 btn-primary  btn-outline text-[13px] font-normal rounded-xl">
-                    <img src="./assets/opt-3.png" alt="">
-                    <p>Transfer Money</p>
-                </button>
-                <button class="btn flex-col h-full py-5 text-[13px] font-normal btn-primary  btn-outline rounded-xl">
-                    <img src="./assets/opt-4.png" alt="">
-                    <p>Get Bonus</p>
-                </button>
-                <button class="btn flex-col h-full py-5 text-[13px] font-normal btn-primary  btn-outline rounded-xl">
-                    <img src="./assets/opt-5.png" alt="">
-                    <p>Pay Bill</p>
-                </button>
-                <button class="btn flex-col h-full py-5 text-[13px] font-normal btn-primary  btn-outline rounded-xl">
-                    <img src="./assets/opt-6.png" alt="">
-                    <p>Transactions</p>
-                </button>
+      </section>
+    </section>
+
+
+    <!-- cash out money -->
+    <section id="cash-out" class=" w-11/12 mx-auto mt-5 hidden">
+      <div class="py-7 font-bold w-11/12 mx-auto">
+        <h2>Cash Out</h2>
+      </div>
+      <div class="input-form">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto rounded-2xl">
+          <div class="card-body">
+            <fieldset class="fieldset">
+              <label class="label font-medium text-[16px] text-neutral">Agent Number</label>
+
+              <input id="agent-num" type="text" class="input py-4 px-5 rounded-full bg-base-200 border-none" placeholder="Enter eleven digit number" value="01234567890" />
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Amount</label>
+              <input
+                id="cashout-amount"
+                type="number"
+                minlength="11"
+                maxlength="11"
+                class="input py-4 px-5 rounded-full bg-base-200 border-none"
+                placeholder="Enter amount to withdraw"
+              />
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Pin Number</label>
+
+              <input id="cashout-pin" type="password" maxlength="4" class="input bg-base-200 border-none py-4 px-5 rounded-full" placeholder="Enter 4 digit pin number" />
+
+              <button id="cashout-btn" class="btn btn-primary mt-4 py-[14px] text-[20px] font-semibold rounded-full"><span class="">Withdraw Money</span></button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add Money -->
+    <section id="add-money" class="w-11/12 mx-auto mt-5 hidden">
+        <div class="input-form">
+        <h2 class="py-7 font-bold w-11/12 mx-auto">Add money</h2>
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto rounded-2xl">
+          <div class="card-body">
+            <fieldset class="fieldset">
+
+              <label class="label font-medium text-[16px] text-neutral">Select A Bank</label>
+              <select id="addmoney-bankoption" class="select w-full rounded-full bg-base-200 border-none">
+                <option disabled selected>Select Back</option>
+                <option>DBBL</option>
+                <option>IBBL</option>
+                <option>CITY BANK</option>
+              </select>
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Bank Account Number</label>
+
+              <input id="addmoney-account-number" type="text" class="input py-4 px-5 rounded-full bg-base-200 border-none" placeholder="Enter bank account number" />
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Amount To Add</label>
+              <input id="addmoney-amount" type="number" class="input py-4 px-5 rounded-full bg-base-200 border-none" placeholder="Add amount to deposit" />
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Pin Number</label>
+
+              <input id="addmoney-pin" type="password" maxlength="4" class="input bg-base-200 border-none py-4 px-5 rounded-full" placeholder="Enter 4 digit pin number" />
+
+              <button id="addmoney-btn" class="btn btn-primary mt-4 py-[14px] text-[20px] font-semibold rounded-full"><span class="">Add Money</span></button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonus Section -->
+     <section id="bonus-money" class=" w-11/12 mx-auto mt-5 hidden" >
+        <h2 class="py-7 font-bold w-11/12 mx-auto">Get Bonus</h2>
+        <div class="input-form ">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto rounded-2xl ">
+            <div class="card-body ">
+              <fieldset class="fieldset">
+
+                  <label class="label font-medium text-[16px] text-neutral pb-3">Enter Bonus Coupon</label>
+  
+                  <input id="cupon-number" type="text" minlength="11" maxlength="11" class="input py-4 px-5 rounded-full bg-base-200 border-none " placeholder="Enter your coupon"/>
+
+                  <br>
+                <button id="btn-bonus" class="btn btn-primary mt-4 py-[14px] text-[20px] font-semibold rounded-full"><span class="">Get Bonus</span></button>
+              </fieldset>
             </div>
-        </section>
+          </div>
+        </div>
+
+     </section>
+
+     <!-- Transfer money -->
+     <section id="transfer-money" class="w-11/12 mx-auto mt-5 hidden ">
+
+        <h2 class="py-7 font-bold">Transfer Money</h2>
+        <div class="input-form ">
+          <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto rounded-2xl">
+            <div class="card-body ">
+              <fieldset class="fieldset">
+
+                  <label class="label font-medium text-[16px] text-neutral">User Account Number</label>
+  
+                  <input id="user-mobile-num" type="text" class="input py-4 px-5 rounded-full bg-base-200 border-none " placeholder="Enter eleven digit number" value="01234567890" />
+
+                  <br>
+                  
+                  <label class="label font-medium text-[16px] text-neutral">Amount</label>
+                  <input id="transfer-amount" type="text" minlength="11" maxlength="11" class="input py-4 px-5 rounded-full bg-base-200 border-none " placeholder="Enter amount to transfer"/>
+
+                <br>
+
+                <label class="label font-medium text-[16px] text-neutral">Pin Number</label>
+
+                <input id="pin-number" type="password" maxlength="4" class="input bg-base-200 border-none py-4 px-5 rounded-full" placeholder="Enter 4 digit pin number" />
+
+                <button id="transfer-btn" class="btn btn-primary mt-4 py-[14px] text-[20px] font-semibold rounded-full"><span class="">Send Now</span></button>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+     </section>
+
+     <!-- Pay Bill -->
+    <section id="pay-bill" class="w-11/12 mx-auto mt-5 ">
+        <div class="input-form">
+        <h2 class="py-7 font-bold w-11/12 mx-auto">Pay Bill</h2>
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 mx-auto rounded-2xl">
+          <div class="card-body">
+            <fieldset class="fieldset">
+
+              <label class="label font-medium text-[16px] text-neutral">Select to Pay</label>
+              <select id="bill-payoption" class="select w-full rounded-full bg-base-200 border-none">
+                <option  disabled selected>Select Back</option>
+                <option>Electricity</option>
+                <option>Wifi</option>
+                <option>Others</option>
+              </select>
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Biller Account Number</label>
+
+              <input id="billpay-account-number" type="text" class="input py-4 px-5 rounded-full bg-base-200 border-none" placeholder="Enter account number" />
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Amount To Pay</label>
+              <input id="pay-amount" type="number" class="input py-4 px-5 rounded-full bg-base-200 border-none" placeholder="Add amount to pay" />
+
+              <br />
+
+              <label class="label font-medium text-[16px] text-neutral">Pin Number</label>
+
+              <input id="billpay-pin" type="password" maxlength="4" class="input bg-base-200 border-none py-4 px-5 rounded-full" placeholder="Enter 4 digit pin number" />
+
+              <button id="billpay-btn" class="btn btn-primary mt-4 py-[14px] text-[20px] font-semibold rounded-full"><span class="">Pay Now</span></button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
     </section>
 
 
-    <!-- Payment History -->
-    <section class="w-11/12 mx-auto mt-5 hidden ">
-        <div class="flex justify-between py-7 font-bold">
-            <h2>Latest Payment</h2>
-            <p>View All</p>
-        </div>
-        <div class="card grid gap-4">
-            <button class="btn btn-outline btn-info   flex justify-between h-full py-3 text-[13px] font-normal  rounded-xl bg-white shadow-sm">
-                <div class="flex gap-2">
-                    <div class="items-center flex justify-center">
-                        <img src="./assets/opt-1.png" alt="">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-semibold text-base">Add Money</p>
-                        <p>Today 01:25 PM</p>
 
-                    </div>
-                </div>
-                <div>
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
-                </div>
-            </button>
-            <button class="btn btn-outline btn-info   flex justify-between h-full py-3 text-[13px] font-normal  rounded-xl bg-white shadow-sm">
-                <div class="flex gap-2">
-                    <div class="items-center flex justify-center">
-                        <img src="./assets/opt-1.png" alt="">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-semibold text-base">Add Money</p>
-                        <p>Today 01:25 PM</p>
-
-                    </div>
-                </div>
-                <div>
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
-                </div>
-            </button>
-            <button class="btn btn-outline btn-info   flex justify-between h-full py-3 text-[13px] font-normal  rounded-xl bg-white shadow-sm">
-                <div class="flex gap-2">
-                    <div class="items-center flex justify-center">
-                        <img src="./assets/opt-1.png" alt="">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-semibold text-base">Add Money</p>
-                        <p>Today 01:25 PM</p>
-
-                    </div>
-                </div>
-                <div>
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
-                </div>
-            </button>
-            <button class="btn btn-outline btn-info   flex justify-between h-full py-3 text-[13px] font-normal  rounded-xl bg-white shadow-sm">
-                <div class="flex gap-2">
-                    <div class="items-center flex justify-center">
-                        <img src="./assets/opt-1.png" alt="">
-                    </div>
-                    <div class="text-left">
-                        <p class="font-semibold text-base">Add Money</p>
-                        <p>Today 01:25 PM</p>
-
-                    </div>
-                </div>
-                <div>
-                    <a href=""><i class="fa-solid fa-bars"></i></a>
-                </div>
-            </button>
-           
-        </div>
-    </section>
-    
-
+    <script src="./script/machine.js"></script>
+    <script src="./script/cashout.js"></script>
+    <script src="./script/addmoney.js"></script>
+    <script src="./script/billpay.js"></script>
+    <script src="./script/bonus.js"></script>
+    <script src="./script/transfer.js"></script>
   </body>
 </html>
